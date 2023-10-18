@@ -1,10 +1,17 @@
 <!-- /views/one_twenty.erb -->
 <h1>1d20</h1>
+<p><ul>
+    <% @rolls.each do |a_roll| %>
+      <li>
+        <%= a_roll %>
+      </li>
+    <% end %>
+    </ul></p>
 
-<% if @die == 1%>
-  <p style="color: red"><%= @outcome %></p>
+<% if @a_roll == 1%>
+  <p style="color: red"><%= @a_roll %></p>
 <% elsif @die == 20%>
-  <p style="color: green"><%= @outcome %></p>
+  <p style="color: green"><%= @a_roll %></p>
 <% else %>
-  <p><%= @outcome %></p>
+  <p><%= @a_roll %></p>
 <% end %>
